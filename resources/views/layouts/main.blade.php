@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+    Главная страница
+    @yield('content')
 </body>
 </html>
