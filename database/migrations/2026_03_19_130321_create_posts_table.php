@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('earnings', 100);
             $table->enum('status', ['created', 'payed', 'started', 'finished', 'confirmed', 'closed', 'canceled']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

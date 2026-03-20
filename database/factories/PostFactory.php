@@ -18,7 +18,22 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'provider_id' => $this->faker->numberBetween(1, 100),
+            'service_id' => $this->faker->numberBetween(1, 100),
+            'total_time' => $this->faker->numberBetween(1, 480),
+            'earnings' => $this->faker->randomFloat(2, 10, 1000),
+            'status' => $this->faker->randomElement(
+                [
+                    'created',
+                    'payed',
+                    'started',
+                    'finished',
+                    'confirmed',
+                    'closed',
+                    'canceled',
+                ]
+            )
+
         ];
     }
 }

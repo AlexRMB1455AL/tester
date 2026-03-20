@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function create(StorePostRequest $request)
+    public function store(StorePostRequest $request)
     {
-        Post::create($request->validate());
+        $validated = $request->validate();
+        Post::create($validated);
         return to_route('home');
     }
 }
