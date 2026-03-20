@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->integer('provider_id');
             $table->integer('service_id');
-            $table->string('total_time', 100);
-            $table->string('earnings', 100);
-            $table->enum('status', ['created', 'payed', 'started', 'finished', 'confirmed', 'closed', 'canceled']);
+            $table->string('total_time');
+            $table->string('earnings');
+            $table->string('status');
             $table->timestamps();
             $table->softDeletes();
         });

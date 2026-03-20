@@ -21,7 +21,7 @@ class PostFactory extends Factory
             'provider_id' => $this->faker->numberBetween(1, 100),
             'service_id' => $this->faker->numberBetween(1, 100),
             'total_time' => $this->faker->numberBetween(1, 480),
-            'earnings' => $this->faker->randomFloat(2, 10, 1000),
+            'earnings' => $this->faker->numberBetween(0, 20000),
             'status' => $this->faker->randomElement(
                 [
                     'created',
